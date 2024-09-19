@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies by Popularity or Box Office</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <!-- Overlay div -->
+    <div class="overlay" id="loading-overlay">
+        Fetching database...
+    </div>
+
+    <div class="container">
+        <h1 id="movie-title">{{ movie.title }}</h1>
+        <img id="movie-cover" src="{{ movie.cover }}" alt="Movie Cover">
+        <p><strong>Producer:</strong> <span id="movie-producer">{{ movie.producer }}</span></p>
+        <p><strong>Year:</strong> <span id="movie-year">{{ movie.release_year }}</span></p>
+        <p><strong>Duration:</strong> <span id="movie-duration">{{ movie.runtime }}</span> minutes</p>
+        <button id="save-btn">Save and Next</button>
+        <button id="skip-btn">Skip</button>
+    </div>
+
+    <script src="/static/scripts.js"></script>
+</body>
+</html>
+
